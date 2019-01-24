@@ -5,8 +5,8 @@ This module uses ROSEGRAPHICS to demonstrate:
   -- accessing their DATA via INSTANCE VARIABLES.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Killian Bailey.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
@@ -17,7 +17,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #     a. For the RoseGraphics coordinate system:
 #
 #        -- Where is the (0, 0) point on the screen?
-#              WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#              upper-left hand of the screen
 #
 #        -- In what direction on the screen
 #           does the positive X-axis point?
@@ -102,6 +102,7 @@ def example2():
     point1 = rg.Point(100, 150)
     point2 = rg.Point(200, 50)
 
+
     # ------------------------------------------------------------------
     # A RoseGraphics object is not associated with a window,
     # and hence are not drawn, until you ATTACH it to a window.
@@ -143,6 +144,7 @@ def example3():
     # ------------------------------------------------------------------
     point1 = rg.Point(100, 150)
     point2 = rg.Point(200, 50)
+
     rectangle = rg.Rectangle(point1, point2)
     rectangle.attach_to(window)
 

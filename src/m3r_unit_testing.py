@@ -5,10 +5,10 @@ This module helps you understand:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
          Aaron Wilkin, their colleagues, and Killian Bailey.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 ###############################################################################
 #
-# TODO: 1.
+# Done: 1.
 #   Allow this module to use the  rosegraphics.py  module by marking the
 #     src
 #   folder in this project as a "Sources Root", as follows:
@@ -69,7 +69,7 @@ def distance(point):
 main()
 
 ###############################################################################
-# TODO: 2.
+# Done: 2.
 #
 # READ the following, asking questions as needed.
 # When you believe that you understading what is says about UNIT TESTING,

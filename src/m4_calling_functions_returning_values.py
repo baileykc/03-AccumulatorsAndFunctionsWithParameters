@@ -32,7 +32,7 @@ def main():
     #       ** Ask a TA or your professor for help in that case. **
     # -------------------------------------------------------------------------
 
-    # m4t_tester.main()
+    m4t_tester.main()
 
 
 def run_test_sum_of_digits():
@@ -79,12 +79,21 @@ def run_test_sum_of_digits():
     print('Test 2 expected', expected)
     print('      actual:  ', answer)
 
+    #Test 3
+    expected = 19
+    answer = sum_of_digits(919)
+    print('Test 3 expected', expected)
+    print('       actual  ', answer)
+
+
+    #Test 4
+    expected = 21
+    answer = sum_of_digits(777)
+    print('Test 4 expected', expected)
+    print('       actual  ', answer)
+
 
 def sum_of_digits(number):
-
-
-
-
     """
     What comes in:  An integer.
     What goes out:  The sum of the digits in the given integer.
@@ -93,6 +102,8 @@ def sum_of_digits(number):
       If the integer is 83135,
       this function returns (8 + 3 + 1 + 3 + 5), which is 20.
     """
+
+
     # -------------------------------------------------------------------------
     # Students:
     #   Do NOT touch this function - it has no TO DO in it.
@@ -120,7 +131,7 @@ def sum_of_digits(number):
 def run_test_digits_in_cube():
     """ Tests the   digits_in_cube   function. """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function.
+    # Done: 3. Implement this function.
     #   It TESTS the  digits_in_cube  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -145,19 +156,23 @@ def run_test_digits_in_cube():
     print('Testing the   digits_in_cube   function:')
     print('-----------------------------------------------------')
 
-
+#Test 5
 def digits_in_cube(n):
+    """
 
-    """
-    What comes in:  A positive integer.
-    What goes out:  The sum of the digits in the CUBE of the integer.
-    Side effects:   None.
-    Example:
-      If the integer (n) is 5    (so n cubed is 125),
-      this function returns (1 + 2 + 5), which is 8.
-    """
+     What comes in:  A positive integer.
+     What goes out:  The sum of the digits in the CUBE of the integer.
+     Side effects:   None.
+     Example:
+       If the integer (n) is 5    (so n cubed is 125),
+       this function returns (1 + 2 + 5), which is 8.
+     """
+    cubed = n ** 3
+    digit = sum_of_digits(cubed)
+    return digit
+
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -171,7 +186,7 @@ def digits_in_cube(n):
 def run_test_digits_in_power():
     """ Tests the   digits_in_power   function. """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement this function.
+    # Done: 5. Implement this function.
     #   It TESTS the  digits_in_power  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -194,8 +209,11 @@ def digits_in_power(n, k):
       this function returns 18
       since 12 to the 3rd power is 1728 (whose digits sum to 18).
     """
+    x = n**k
+    return sum_of_digits(x)
+
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # Done: 6. Implement and test this function.
     #
     ###########################################################################
     # IMPORTANT: CALL, as many times as needed,
@@ -252,8 +270,15 @@ def fancy_sums_of_digits(n):
             -- the sum of the digits in (X ** Y) is 124309 (trust me!)
             -- so this function returns 124309.
     """
+
+    X = sum_of_digits(n**1000)
+    Y = sum_of_digits(n**999)
+    Z = X**Y
+    sum = sum_of_digits(Z)
+    return sum
+
     # -------------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # Done: 8. Implement and test this function.
     #
     ###########################################################################
     # IMPORTANT: CALL, as many times as needed,

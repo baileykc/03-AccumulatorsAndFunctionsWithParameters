@@ -12,12 +12,13 @@ def main():
     """ Calls the   TEST   functions in this module. """
     run_test_sum_cosines()
     run_test_sum_square_roots()
+    import math
 
 
 def run_test_sum_cosines():
     """ Tests the   sum_cosines   function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this function.
+    # Done: 2. Implement this function.
     #   It TESTS the  sum_cosines  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -29,9 +30,34 @@ def run_test_sum_cosines():
     print('Testing the   sum_cosines   function:')
     print('--------------------------------------------------')
 
+    #Test 1
+    expected = .13416
+    answer = sum_cosines(3)
+    print('Test 1 expected', expected)
+    print('       answer  ', answer)
 
+    #Test 2
+    expected = 1.124
+    answer = sum_cosines(2)
+    print('Test 2 expected', expected)
+    print(       'answer'  , answer)
+
+    #Test 3
+    expected = -.236
+    answer = sum_cosines(5)
+    print('Test 3 expected', expected)
+    print('       answer  ', answer)
 def sum_cosines(n):
+    import math
+    answer = 0
+    for k in range(n+1):
+        answer = answer + math.cos(k)
+
+    return answer
+
+
     """
+        
     What comes in:  A non-negative integer n.
     What goes out:  The sum of the cosines of the integers
        0, 1, 2, 3, ... n, inclusive, for the given n.
@@ -40,6 +66,9 @@ def sum_cosines(n):
       If n is 3, this function returns
         cos(0) + cos(1) + cos(2) + cos(3)   which is about 0.13416.
     """
+
+
+
     # -------------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
@@ -53,7 +82,7 @@ def sum_cosines(n):
 def run_test_sum_square_roots():
     """ Tests the   sum_square_roots   function. """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement this function.
+    # Done: 4. Implement this function.
     #   It TESTS the  sum_square_roots  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -65,8 +94,19 @@ def run_test_sum_square_roots():
     print('Testing the   sum_square_roots   function:')
     print('--------------------------------------------------')
 
+    # test 5
+    expected = 11.854408
+    answer = sum_square_roots(5)
+    print('Test 5 expected', expected)
+    print('       answer  ', answer)
 
 def sum_square_roots(n):
+    import math
+    answer = 0
+    for k in range (n+1):
+        answer = answer + math.sqrt(2*k)
+
+    return answer
     """
     What comes in:  A non-negative integer n.
     What goes out:  The sum of the square roots of the integers
@@ -79,6 +119,9 @@ def sum_square_roots(n):
          sqrt(2) + sqrt(4) + sqrt(6) + sqrt(8) + sqrt(10),
       which is about 11.854408.
     """
+
+
+
     # -------------------------------------------------------------------------
     # TODO: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).

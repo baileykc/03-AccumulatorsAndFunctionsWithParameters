@@ -134,6 +134,7 @@ def draw_circles2():
         radius = (10)
         circle1 = rg.Circle(rg.Point(20*k + 50, 100), radius)
         circle1.attach_to(window)
+        circle1.fill_color=('blue')
         window.render()
     window.close_on_mouse_click()
 

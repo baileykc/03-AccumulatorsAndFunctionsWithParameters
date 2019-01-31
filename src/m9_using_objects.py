@@ -15,7 +15,7 @@ def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
     two_circles()
-
+    circle_and_rectangle()
 
 def two_circles():
     """
@@ -35,14 +35,18 @@ def two_circles():
     #    (by calling this function).
     # -------------------------------------------------------------------------
 
-
-    window = rg.RoseWindow
-    circle1 = rg.Circle(rg.Point(0, 0), 20)
-    circle2 = rg.Circle(rg.Point(10, 10), 10)
+    window = rg.RoseWindow()
+    circle1 = rg.Circle(rg.Point(100, 100), 50)
+    circle2 = rg.Circle(rg.Point(150, 150), 25)
+    circle1.fill_color='blue'
     circle1.attach_to(window)
     circle2.attach_to(window)
-    window.render(window)
-    window.close_on_mouse_click(window)
+    window.render()
+    window.close_on_mouse_click()
+    return
+
+
+
 
 
 
@@ -79,7 +83,7 @@ def circle_and_rectangle():
            150.0
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its green doc-string above.
+    # Window: 3. Implement this function, per its green doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -88,8 +92,16 @@ def circle_and_rectangle():
     #       instance variables for outline thickness, etc.
     # -------------------------------------------------------------------------
 
-    window = rg.RoseWindow
-    rectangle = rg.Rectangle
+    window = rg.RoseWindow()
+    rectangle = rg.Rectangle(rg.Point(180, 115), rg.Point(75, 150))
+    circle1 = rg.Circle(rg.Point(150, 150),30)
+    circle1.fill_color='blue'
+    circle1.outline_thickness=10
+    rectangle.attach_to(window)
+    circle1.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
+
 
 def lines():
     """

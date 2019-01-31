@@ -37,8 +37,11 @@ def two_circles():
 
 
     window = rg.RoseWindow
-    circle1 = rg.Circle(rg.Point(0,0), 20)
-    circle2 = rg.Circle(rg.Point(10,10), 10)
+    circle1 = rg.Circle(rg.Point(0, 0), 20)
+    circle2 = rg.Circle(rg.Point(10, 10), 10)
+    circle1.attach_to(window)
+    circle2.attach_to(window)
+    window.render(window)
     window.close_on_mouse_click(window)
 
 

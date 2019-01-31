@@ -69,6 +69,13 @@ def draw_circles1():
     print('--------------------------------------------------')
     print('Running draw_circles1:  See graphics window')
     print('--------------------------------------------------')
+    window = rg.RoseWindow(400, 400)
+    for k in range(20):
+        radius = (10*k)
+    circle1 = rg.Circle(radius)
+    window.close_on_mouse_click()
+
+
 
 
 

@@ -34,13 +34,13 @@ def two_circles():
     # Put a statement in   main   to test this function
     #    (by calling this function).
     # -------------------------------------------------------------------------
+
+
     window = rg.RoseWindow
-    alan = rg.SimpleTurtle()
-    phil = rg.SimpleTurtle()
-    alan.pen = rg.Pen('blue',5)
-    alan.draw_circle(30)
-    phil.forward(150)
-    phil.draw_circle(60)
+    circle1 = rg.Circle(rg.Point(0,0), 20)
+    circle2 = rg.Circle(rg.Point(10,10), 10)
+    window.close_on_mouse_click(window)
+
 
 
 
@@ -85,6 +85,8 @@ def circle_and_rectangle():
     #       instance variables for outline thickness, etc.
     # -------------------------------------------------------------------------
 
+    window = rg.RoseWindow
+    rectangle = rg.Rectangle
 
 def lines():
     """
